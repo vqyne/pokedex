@@ -1,38 +1,151 @@
 .logo {
-    text-align: center;
-    width: 15%;
-    height: 15%;
+    position: relative;
+    width: 8em;
+    height: 0;
+    z-index: 999;
 }
 
-.row {
-    background-color: #ffdb00;
-}
-
-.flex {
-    display: flex;
-}
-
-.gap-10 {
-    gap: 3.5rem;
-}
-
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.overflow-x-hidden {
-    overflow-x: hidden;
-}
-
-.w-full {
+.logo .wrapper {
+    position: absolute;
+    top: 0;
+    margin: auto;
     width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    z-index: 999;
 }
 
-.h-auto {
-    height: auto;
+.logo img {
+    width: 100%;
+    box-sizing: initial;
+    z-index: 999;
 }
 
-body{
-    margin: 0;
+nav {
+    background-color: #ffcb05;
+}
+
+.navbar {
+    height: 3em;
+    border-bottom: 0.25em solid #306bb3;
+    padding-top: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 0rem;
+    z-index: 999;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+    background-color: #ffcb05;
+    z-index: 2;
+}
+
+#footer {
+    padding-bottom: 1rem;
+    /* Footer height */
+    padding-top: 0.5rem;
+    /* Footer height */
+    background-color: #ffcb05;
+    border-top: 0.25em solid #306bb3;
+    font-family: "pokemon", sans-serif;
+    color: #306bb3;
+}
+
+#add {
+    height: 300px;
+    position: relative;
+    border-bottom: 0.25em solid #306bb3;
+}
+
+#addbutton {
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    width: 80px;
+    height: 40px;
+    transform: translateY(-50%);
+    color: #306bb3;
+    background-color: #ffcb05;
+    font-family: "pokemon", sans-serif;
+    border-radius: 30px;
+    border: 3px solid #306bb3;
+    -webkit-text-stroke: 1px #131313;
+}
+
+button {
+    border: 5px solid #306bb3;
+}
+
+label {
+    display: block;
+    font: 1rem 'pokemon', sans-serif;
+    -webkit-text-stroke: 1px #131313;
+}
+
+
+label {
+    margin: 0rem 0;
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    color: #306bb3;
+}
+
+input {
+    margin: 0rem 0;
+    position: absolute;
+    left: 15%;
+    top: 27%;
+    height: 25px;
+    border: 2px solid #306bb3;
+}
+
+#abilities {
+    margin: 0rem 0;
+    position: absolute;
+    left: 15%;
+    top: 55%;
+    width: 185px;
+    border: 2px solid #306bb3;
+}
+
+#types {
+    margin: 0rem 0;
+    position: absolute;
+    left: 15%;
+    top: 75%;
+    width: 185px;
+    border: 2px solid #306bb3;
+}
+
+#abilabel {
+    margin: 0rem 0;
+    position: absolute;
+    left: 15%;
+    top: 45%;
+}
+
+#typelabel {
+    margin: 0rem 0;
+    position: absolute;
+    left: 15%;
+    top: 65%;
+}
+
+#display {
+    height: 1000px;
+    position: relative;
+}
+
+th, td {
+    font: 1rem 'pokemon', sans-serif;
+    color: #306bb3;
+    -webkit-text-stroke: 1px #131313;
+}
+
+#actions{
+    position: absolute;
+    left: 80%;
 }

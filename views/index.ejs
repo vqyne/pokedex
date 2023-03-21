@@ -1,14 +1,83 @@
 <%- include('./partials/header'); %>
-<main>
- <div class="ui segment">
-   <h1>At least we can see something now</h1>
-   <p>This is visual of templating through EJS</p>
- </div>
-</main>
+  <main>
+    <div class="ui segment" id="page-container">
+      <div id="add">
+        <form action="add" method="POST">
+          <!-- POKEMON NAME -->
+          <label for="name">POKEMON NAME:</label>
+          <input type="text" id="name" name="name" required placeholder="Pokemon name">
+          <!-- ABILITIES -->
+          <label for="abilities" id="abilabel">ABILITIES:</label>
+          <select name="abilities" id="abilities">
+            <% abilities.forEach(function(item){ %>
+              <option value="<%= item.name %>">
+                <%= item.name %>
+              </option>
+              <% }); %>
+          </select>
+          <label for="types" id="typelabel">TYPES:</label>
+          <select name="types" id="types">
+            <% types.forEach(function(item){ %>
+              <option value="<%= item.name %>">
+                <%= item.name %>
+              </option>
+              <% }); %>
+          </select>
+          <!-- TYPES -->
+          <input type="submit" value="ADD" id="addbutton"></button>
+        </form>
+      </div>
+      <table class="ui celled table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Ability</th>
+            <th>Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% pokemons.forEach(function(pokemon){ %>
+            <tr>
+              <td>
+                <%= pokemon.id %>
+              </td>
 
-<footer>
-  <%- include('./partials/footer'); %>
-</footer>
+              <td>
+                <%= pokemon.name %>
+              </td>
 
-</body> 
-</html>
+              <td>
+                <%= pokemon.ability %>
+              </td>
+
+              <td>
+                <%= pokemon.type %>
+              </td>
+
+              <td id="actions">
+                <form action="/update" method="POST" style="display:inline; width:20px; height:20px;">
+                  <input type="hidden" name="id" value="<%= pokemon.id %>">
+                  <button type="submit" style="background:none;border:none;padding:0;width:24px; height:24px;">
+                      <img src="./img/edit.png" alt="Edit" width="80%" height="80%">
+                  </button>
+              </form>
+                <form action="/delete" method="POST" style="display:inline; width:20px; height:20px;">
+                  <input type="hidden" name="id" value="<%= pokemon.id %>">
+                  <button type="submit" class="delete-button" style="background:none;border:none;padding:0;width:24px; height:24px;"><img src="./img/delete.png" alt="" width="80%" height="80%"></button>
+                </form>
+              </td>
+
+            </tr>
+            <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <footer id="footer">
+    <%- include('./partials/footer'); %>
+  </footer>
+  </body>
+
+  </html>
