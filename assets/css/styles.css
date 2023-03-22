@@ -38,7 +38,7 @@ nav {
 #page-container {
     position: relative;
     min-height: 100vh;
-    background-color: #ffcb05;
+    background-color: #f2f2f2;
     z-index: 2;
 }
 
@@ -49,14 +49,17 @@ nav {
     /* Footer height */
     background-color: #ffcb05;
     border-top: 0.25em solid #306bb3;
-    font-family: "pokemon", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    font-style: normal;
     color: #306bb3;
 }
 
 #add {
     height: 300px;
     position: relative;
-    border-bottom: 0.25em solid #306bb3;
+    border-bottom: 0.25em solid #676767;
 }
 
 #addbutton {
@@ -68,10 +71,10 @@ nav {
     transform: translateY(-50%);
     color: #306bb3;
     background-color: #ffcb05;
-    font-family: "pokemon", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
     border-radius: 30px;
     border: 3px solid #306bb3;
-    -webkit-text-stroke: 1px #131313;
 }
 
 button {
@@ -80,8 +83,9 @@ button {
 
 label {
     display: block;
-    font: 1rem 'pokemon', sans-serif;
-    -webkit-text-stroke: 1px #131313;
+    font: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
 }
 
 
@@ -97,7 +101,7 @@ input {
     margin: 0rem 0;
     position: absolute;
     left: 15%;
-    top: 27%;
+    top: 25%;
     height: 25px;
     border: 2px solid #306bb3;
 }
@@ -135,17 +139,99 @@ input {
 }
 
 #display {
-    height: 1000px;
+    height: 600px;
     position: relative;
 }
 
 th, td {
-    font: 1rem 'pokemon', sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font: 2rem;
     color: #306bb3;
-    -webkit-text-stroke: 1px #131313;
 }
 
 #actions{
     position: absolute;
     left: 80%;
 }
+
+#update{
+    height: 300px;
+    border-top: 0.25em solid #676767;
+}
+
+#updatebutton {
+    position: relative;
+    left: 52%;
+    top: 20%;
+    width: 80px;
+    height: 40px;
+    transform: translateY(-200%);
+    color: #306bb3;
+    background-color: #ffcb05;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    border-radius: 30px;
+    border: 3px solid #306bb3;
+}
+
+#abilities2 {
+    margin: 0rem 0;
+    position: relative;
+    left: 15%;
+    top: 55%;
+    width: 185px;
+    border: 2px solid #306bb3;
+}
+
+#types2 {
+    margin: 0rem 0;
+    position: relative;
+    left: 15%;
+    top: 75%;
+    width: 185px;
+    border: 2px solid #306bb3;
+}
+
+#abilabel2 {
+    margin: 0rem 0;
+    position: relative;
+    left: 15%;
+    top: 45%;
+}
+
+#typelabel2 {
+    margin: 0rem 0;
+    position: relative;
+    left: 15%;
+    top: 65%;
+}
+
+#nameinput2{
+    margin: 0rem 0;
+    position: relative;
+    left: 15%;
+    top: 65%;
+}
+
+#name2{
+    margin: 0rem 0;
+    position: relative;
+    left: 15%;
+    top: 65%;
+}
+
+#idlabel{
+    margin: 0rem 0;
+    position: relative;
+    left: 15%;
+    top: 65%;
+}
+
+#idinput{
+    margin: 0rem 0;
+    position: relative;
+    left: 15%;
+    top: 65%;
+}
+

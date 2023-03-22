@@ -1,1 +1,4 @@
-{"id":1,"name":"Test","ability":"Adaptability","type":"Bug"}
+
+{"id":4,"name":"Pulsy","ability":"Adaptability","type":"Bug"}
+{"id":5,"name":"Haydar","ability":"Adaptability","type":"Bug"}
+{"id":6,"name":"Haydar","ability":"Adaptability","type":"Bug"}

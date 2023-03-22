@@ -57,15 +57,11 @@
               </td>
 
               <td id="actions">
-                <form action="/update" method="POST" style="display:inline; width:20px; height:20px;">
-                  <input type="hidden" name="id" value="<%= pokemon.id %>">
-                  <button type="submit" style="background:none;border:none;padding:0;width:24px; height:24px;">
-                      <img src="./img/edit.png" alt="Edit" width="80%" height="80%">
-                  </button>
-              </form>
                 <form action="/delete" method="POST" style="display:inline; width:20px; height:20px;">
                   <input type="hidden" name="id" value="<%= pokemon.id %>">
-                  <button type="submit" class="delete-button" style="background:none;border:none;padding:0;width:24px; height:24px;"><img src="./img/delete.png" alt="" width="80%" height="80%"></button>
+                  <button type="submit" class="delete-button"
+                    style="background:none;border:none;padding:0;width:24px; height:24px;"><img src="./img/delete.png"
+                      alt="" width="80%" height="80%"></button>
                 </form>
               </td>
 
@@ -73,6 +69,36 @@
             <% }); %>
         </tbody>
       </table>
+      <div id="update">
+        <form action="update" method="POST">
+          <!-- POKEMON NAME -->
+          <label for="name" id="idlabel">ID:</label>
+          <input type="text" id="idinput" name="id" required placeholder="ID">
+          <!-- POKEMON NAME -->
+          <label for="name" id="name2">POKEMON NAME:</label>
+          <input type="text" id="nameinput2" name="name" required placeholder="Pokemon name">
+          <!-- ABILITIES -->
+          <label for="abilities" id="abilabel2">ABILITIES:</label>
+          <select name="abilities" id="abilities2">
+            <% abilities.forEach(function(item){ %>
+              <option value="<%= item.name %>">
+                <%= item.name %>
+              </option>
+              <% }); %>
+          </select>
+          <label for="types" id="typelabel2">TYPES:</label>
+          <select name="types" id="types2">
+            <% types.forEach(function(item){ %>
+              <option value="<%= item.name %>">
+                <%= item.name %>
+              </option>
+              <% }); %>
+          </select>
+          <!-- TYPES -->
+          <input type="submit" value="UPDATE" id="updatebutton"></button>
+        </form>
+      </div>
+
     </div>
   </main>
   <footer id="footer">
